@@ -10,7 +10,12 @@ namespace ConsoleApp1
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			var a = 10;
+			var b = "TEST0";
+			var c = 10.10;
+			Console.WriteLine("{0} type: {1}", a, a.GetType());
+			Console.WriteLine("{0} type: {1}", b, b.GetType());
+			Console.WriteLine("{0} type: {1}", c, c.GetType());
 			Console.ReadKey();
 		}
 	}
