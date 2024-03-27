@@ -10,12 +10,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            // Task 1
             var a = 10;
             var b = "TEST0";
             var c = 10.10;
             Console.WriteLine("{0} type: {1}", a, a.GetType());
             Console.WriteLine("{0} type: {1}", b, b.GetType());
             Console.WriteLine("{0} type: {1}", c, c.GetType());
+
+            //Task 2
 
             // reading numbers from console
             int num1 = Convert.ToInt32(Console.ReadLine());
@@ -24,23 +27,30 @@ namespace ConsoleApp1
 
             //checking which one is greater
             var flag = 0;
-            if(num1 > num2)
+            if (num1 > num2)
             {
                 flag = 1;
             }
-            if(flag == 1)
+            if (flag == 1)
             {
-                if(num1 > num3)
+                if (num1 > num3)
                 {
                     Console.WriteLine(num1);
                 }
-            } else if (num2 > num3)
+            }
+            else if (num2 > num3)
             {
                 Console.WriteLine(num2);
-            } else
+            }
+            else
             {
                 Console.WriteLine(num3);
             }
+
+            // Task 3
+
+            CheckAlphabet alph = new CheckAlphabet();
+            alph.checkvowelornot('s');
         }
     }
 }
