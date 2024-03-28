@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-	class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -97,10 +97,42 @@ namespace ConsoleApp1
             int k = 1;
             do
             {
-                Console.WriteLine(k*newnum);
+                Console.WriteLine(k * newnum);
                 k++;
 
             } while (k <= newnum);
+
+            //Task 7
+
+            Console.WriteLine("string to upper case");
+            Console.WriteLine("Enter a name");
+            var name = Convert.ToString(Console.ReadLine());
+            Program.stringToUpper(ref name);
+
+            //Task 8
+            Console.WriteLine("sum of digits");
+            Console.WriteLine("Enter the number");
+            int z = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            Console.WriteLine(obj.sumofdigits(ref z));
+        }
+
+        static void stringToUpper(ref string name)
+        {
+            Console.WriteLine(name.ToUpper());
+        }
+
+        public int sumofdigits(ref int digit)
+        {
+            int sumofdigit = 0;
+            double length = Math.Floor(Math.Log10(digit) + 1);
+            for(int m= 1; m <= length; m++)
+            {
+                int reminder = digit % 10;
+                sumofdigit = sumofdigit + reminder;
+                digit = digit / 10;
+            }
+            return sumofdigit;
         }
     }
 }
