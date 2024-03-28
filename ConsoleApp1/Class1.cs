@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class CheckAlphabet
     {
-         public void checkvowelornot(char x)
+         public static void checkvowelornot(char x)
         {
              switch(x)
             {

@@ -49,8 +49,58 @@ namespace ConsoleApp1
 
             // Task 3
 
-            CheckAlphabet alph = new CheckAlphabet();
-            alph.checkvowelornot('s');
+            Console.WriteLine("Enter a character");
+            char newchar = char.ToLower(Console.ReadLine()[0]);
+            CheckAlphabet.checkvowelornot(newchar);
+
+            // Task 4
+            Console.WriteLine("sum of the first n natural numbers");
+
+            Console.WriteLine("Enter the n value");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            if (n != 0)
+            {
+                for (int i = 1; i <= n; i++)
+                {
+                    sum = sum + i;
+                }
+                Console.WriteLine(sum);
+            }
+            else
+            {
+                Console.WriteLine(0);
+            }
+
+            //Task 5
+
+            Console.WriteLine("number is prime or not");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int j = 2;
+            while (j <= num - 1)
+            {
+                if (num % j == 0)
+                {
+                    Console.WriteLine("The Given Number is not Prime");
+                    break;
+                }
+                j++;
+            }
+            if (num == j)
+            {
+                Console.WriteLine("The Given Number is an Prime Number");
+            }
+
+            //Task6
+            Console.WriteLine("Multiplication of given number");
+            int newnum = Convert.ToInt32(Console.ReadLine());
+            int k = 1;
+            do
+            {
+                Console.WriteLine(k*newnum);
+                k++;
+
+            } while (k <= newnum);
         }
     }
 }
