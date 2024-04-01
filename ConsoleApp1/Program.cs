@@ -134,5 +134,9 @@ namespace ConsoleApp1
             }
             return sumofdigit;
         }
+
+        // Find vowels from an array
+       ArrayClass.findVowel();
+        
     }
 }
